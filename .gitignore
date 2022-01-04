@@ -1,0 +1,6 @@
+/node_modules
+/.sass-cache
+/style.css.map
+/style.css
+/package.json
+/package-lock.json
