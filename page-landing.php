@@ -8,7 +8,7 @@
 * @package resonanz
 */
 
-get_header();
+get_header('landing');
 ?>
 
 	<main id="primary landing">
