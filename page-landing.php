@@ -11,7 +11,7 @@
 get_header('landing');
 ?>
 
-	<main id="primary landing">
+	<main id="primary" class="site site--landing">
 
 		<?php
 		while ( have_posts() ) :
