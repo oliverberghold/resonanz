@@ -781,8 +781,23 @@ textarea {
   margin-right: auto;
   margin-bottom: 1.5em; }
 
-.site {
-  max-width: 60em;
+.site-header {
+  max-width: 70em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2em;
+  padding-left: 2em;
+  border: 1px solid; }
+
+.container {
+  max-width: 70em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2em;
+  padding-left: 2em; }
+
+.site-main .entry-content {
+  max-width: 70em;
   margin-right: auto;
   margin-left: auto;
   padding-right: 2em;
