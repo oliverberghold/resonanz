@@ -963,12 +963,14 @@ textarea {
   transition: all .5s ease-in-out; }
   @media (min-width: 600px) {
     .site-header {
-      height: 7em; } }
+      height: 7em;
+      top: 2em; } }
   .site-header .container {
     display: flex;
     align-items: center; }
 
 .site-header--shadow {
+  background-color: white;
   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.2); }
 
 .site-footer {
@@ -1038,8 +1040,7 @@ textarea {
       @media (min-width: 900px) {
         .nav-menu li a {
           color: #222222;
-          font-size: .9em;
-          margin-top: 1em; } }
+          font-size: .9em; } }
 
 .main-navigation ul {
   display: none;
