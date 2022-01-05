@@ -1,0 +1,84 @@
+.title {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title--xs {
+  font-size: .85em;
+}
+
+.title--s {
+  font-size: 1.1em;
+}
+
+.title--m {
+  font-size: min(max(1.5em, 1.5vw), 3em);
+}
+
+.title--l {
+  font-size: min(max(1.7em, 2vw), 3.5em);
+  line-height: 1.2;
+}
+
+.title--centered {
+  text-align: center;
+}
+
+.title--xl {
+  font-size: min(max(1.4em, 3vw), 2.5em);
+  line-height: 1.3;
+
+  span {
+    color: $la-palma;
+  }
+}
+
+.teaser__copy {
+  font-size: .85em;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: .85em;
+  position: relative;
+  display: inline-block;
+  margin-top: 1em;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: .1em;
+    width: 96%;
+    height: .4em;
+    background-color: $mantis;
+    border-radius: .05em;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .2s ease;
+  }
+
+  &:hover {
+    &:after {
+      height: .6em;
+      width: 100%;
+    }
+  }
+}
+
+.kicker {
+  font-size: .6em;
+  display: block;
+  margin-bottom: .5em;
+  color: $la-palma;
+}
+
+.typo--white {
+  color: white;
+}

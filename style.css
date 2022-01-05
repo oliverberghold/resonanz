@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
 /*!
 Theme Name: Resonanz
 Theme URI:
@@ -316,7 +318,6 @@ input,
 optgroup,
 select,
 textarea {
-  color: #404040;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -730,6 +731,222 @@ textarea {
   margin-right: auto;
   margin-bottom: 1.5em; }
 
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eeeeee; }
+
+section {
+  margin-top: 9em; }
+  @media (max-width: 599px) {
+    section {
+      margin-top: 4em; } }
+
+footer {
+  background-color: #151515;
+  margin-top: 9em;
+  padding-top: 3em;
+  padding-bottom: 3em; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden,
+[hidden] {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */ }
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix::after,
+.clearfix::before {
+  content: " ";
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *::after,
+  *::before {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]::after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: ""; }
+
+  pre {
+    white-space: pre-wrap !important; }
+
+  blockquote,
+  pre {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  img,
+  tr {
+    page-break-inside: avoid; }
+
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+@media (min-width: 600px) {
+  .main {
+    margin-top: 8em; } }
+
 .container {
   max-width: 70em;
   margin-right: auto;
@@ -753,6 +970,9 @@ textarea {
 
 .site-header--shadow {
   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.2); }
+
+.site-footer {
+  margin-top: 10em; }
 
 .main-navigation {
   display: block;
@@ -990,9 +1210,116 @@ textarea {
     margin-left: -1em; }
 
 .site {
-  margin-top: 10em; }
+  margin-top: 5em; }
+  @media (min-width: 600px) {
+    .site {
+      margin-top: 10em; } }
 
 .is-fixed {
   overflow: hidden; }
+
+.page-intro {
+  margin-top: 0; }
+
+.intro__content {
+  flex: 1 0 0; }
+  @media (min-width: 900px) {
+    .intro__content {
+      flex: 2 0 0; } }
+  @media (min-width: 600px) {
+    .intro__content p {
+      font-size: min(max(1.5em, 1.5vw), 3em); } }
+  .intro__content .text-link {
+    margin-top: 0;
+    font-size: 1em;
+    color: inherit; }
+
+@media (max-width: 599px) {
+  .intro__illustration {
+    width: 100%;
+    margin-left: auto; } }
+@media (min-width: 600px) {
+  .intro__illustration {
+    flex: 2 0 0; } }
+@media (min-width: 900px) {
+  .intro__illustration {
+    flex: 3 0 0; } }
+.intro__illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 0 2em; }
+  @media (min-width: 600px) {
+    .intro__illustration img {
+      height: calc(100% + 3em); } }
+  @media (min-width: 900px) {
+    .intro__illustration img {
+      height: calc(100% + 6em); } }
+
+.title {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif; }
+
+.title--xs {
+  font-size: .85em; }
+
+.title--s {
+  font-size: 1.1em; }
+
+.title--m {
+  font-size: min(max(1.5em, 1.5vw), 3em); }
+
+.title--l {
+  font-size: min(max(1.7em, 2vw), 3.5em);
+  line-height: 1.2; }
+
+.title--centered {
+  text-align: center; }
+
+.title--xl {
+  font-size: min(max(1.4em, 3vw), 2.5em);
+  line-height: 1.3; }
+  .title--xl span {
+    color: #27A212; }
+
+.teaser__copy {
+  font-size: .85em;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.text-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: .85em;
+  position: relative;
+  display: inline-block;
+  margin-top: 1em; }
+  .text-link:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: .1em;
+    width: 96%;
+    height: .4em;
+    background-color: #92c770;
+    border-radius: .05em;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all .2s ease; }
+  .text-link:hover:after {
+    height: .6em;
+    width: 100%; }
+
+.kicker {
+  font-size: .6em;
+  display: block;
+  margin-bottom: .5em;
+  color: #27A212; }
+
+.typo--white {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */
