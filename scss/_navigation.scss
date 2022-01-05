@@ -5,6 +5,7 @@
   display: flex;
   @include for-tablet-landscape-up {
     flex: 3 0 0;
+    margin-left: 3em;
   }
 
   .menu-toggle {
@@ -81,56 +82,7 @@
     }
   }
 }
-
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  @include for-tablet-portrait-up {
-    margin-left: 3em;
-  }
-}
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li.focus > ul,
-.main-navigation ul ul li:hover > ul {
-  display: block;
-  left: auto;
-}
-
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-.main-navigation ul li.focus > ul,
-.main-navigation ul li:hover > ul {
-  left: auto;
-}
-
-.main-navigation li {
-  position: relative;
-}
-
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
 /* Small menu. */
-.main-navigation.toggled ul,
 .menu-toggle {
   display: block;
 }
@@ -138,8 +90,19 @@
   .menu-toggle {
     display: none;
   }
+}
+// sub-menu
 
-  .main-navigation ul {
-    display: flex;
+.sub-menu {
+  position: absolute;
+  border: 1px solid;
+  padding: 0;
+  background-color: white;
+  @include for-tablet-portrait-up {
+    margin-left: 0;
+  }
+
+  li {
+    margin: 0;
   }
 }

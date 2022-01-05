@@ -983,7 +983,8 @@ textarea {
   display: flex; }
   @media (min-width: 900px) {
     .main-navigation {
-      flex: 3 0 0; } }
+      flex: 3 0 0;
+      margin-left: 3em; } }
   .main-navigation .menu-toggle {
     margin-left: auto;
     z-index: 1; }
@@ -1042,57 +1043,24 @@ textarea {
           color: #222222;
           font-size: .9em; } }
 
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  @media (min-width: 600px) {
-    .main-navigation ul {
-      margin-left: 3em; } }
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999; }
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0; }
-
-.main-navigation ul ul li.focus > ul,
-.main-navigation ul ul li:hover > ul {
-  display: block;
-  left: auto; }
-
-.main-navigation ul ul a {
-  width: 200px; }
-
-.main-navigation ul li.focus > ul,
-.main-navigation ul li:hover > ul {
-  left: auto; }
-
-.main-navigation li {
-  position: relative; }
-
-.main-navigation a {
-  display: block;
-  text-decoration: none; }
-
 /* Small menu. */
-.main-navigation.toggled ul,
 .menu-toggle {
   display: block; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
-    display: none; }
+    display: none; } }
+.sub-menu {
+  position: absolute;
+  border: 1px solid;
+  padding: 0;
+  background-color: white; }
+  @media (min-width: 600px) {
+    .sub-menu {
+      margin-left: 0; } }
+  .sub-menu li {
+    margin: 0; }
 
-  .main-navigation ul {
-    display: flex; } }
 .teaser {
   display: flex;
   gap: 1em; }

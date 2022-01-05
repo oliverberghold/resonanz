@@ -117,3 +117,6 @@ window.addEventListener('scroll', function() {
   }
   console.log(scrollpos)
 })
+//
+// language navigation
+//
