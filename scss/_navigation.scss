@@ -48,7 +48,7 @@
     justify-content: center;
   }
 
-  li {
+  .menu-item {
     list-style: none;
     @include for-tablet-landscape-up {
       margin-left: 1em;
@@ -93,16 +93,25 @@
 }
 // sub-menu
 
-.sub-menu {
-  position: absolute;
-  border: 1px solid;
-  padding: 0;
-  background-color: white;
-  @include for-tablet-portrait-up {
-    margin-left: 0;
+.menu-item-has-children {
+  .sub-menu {
+    display: none;
+    position: absolute;
+    border: 1px solid;
+    padding: 0;
+    background-color: white;
+    @include for-tablet-portrait-up {
+      margin-left: 0;
+    }
   }
 
-  li {
-    margin: 0;
+  &.focus {
+    .sub-menu {
+      display: block;
+    }
+  }
+
+  .menu-item {
+    margin-left: 0;
   }
 }
