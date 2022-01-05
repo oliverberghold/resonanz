@@ -1,0 +1,157 @@
+.teaser {
+  display: flex;
+  gap: 1em;
+  @include for-tablet-portrait-up {
+    gap: 3em;
+  }
+}
+
+.teaser--two-column {
+  @include for-phone-only {
+    flex-direction: column;
+  }
+
+  .flex-wrapper,
+  .teaser__illustration {
+    flex: 1 0 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.teaser--three-column {
+  @include for-phone-only {
+    flex-direction: column;
+    padding: 2em;
+  }
+  @include for-tablet-portrait-up {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+
+.teaser--three-column-centered {
+  display: flex;
+  gap: 0;
+
+  .teaser__column {
+    flex: 1 0 0;
+
+    &:first-child {
+      @include for-phone-only {
+        order: 2;
+      }
+    }
+
+    &:nth-child(2n) {
+      margin-bottom: 2em;
+      display: flex;
+      justify-content: center;
+      @include for-phone-only {
+        display: flex;
+        order: 1;
+        justify-content: center;
+      }
+
+      svg {
+        width: 30%;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include for-phone-only {
+        order: 2;
+      }
+    }
+  }
+}
+
+.teaser--re-order {
+  @include for-phone-only {
+    flex-direction: column-reverse;
+  }
+}
+
+.teaser--page-intro {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 0 0 2em;
+  position: relative;
+  z-index: 1;
+  @include for-phone-only {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+.teaser__illustration {
+  position: relative;
+}
+
+.teaser__illustration--left {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: $mantis;
+    top: -1em;
+    left: -1em;
+    z-index: -1;
+    border-radius: 0 .5em 0;
+  }
+
+  img {
+    border-radius: 0 0 1.5em 0;
+  }
+}
+
+.teaser__illustration--right {
+  img {
+    border-radius: 0 0 0 1.5em;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: $mantis;
+    top: -1em;
+    left: -1em;
+    z-index: -1;
+    border-radius: .5em 0;
+  }
+}
+
+.teaser__rows {
+  flex: 1 0 0;
+}
+
+.features-list {
+  margin: 0 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+
+.features-list__item {
+  margin-top: .5em;
+  margin-bottom: 0;
+  font-size: .85em;
+  line-height: 1.8;
+  color: white;
+  text-indent: -.3em;
+
+  &:before {
+    content: "•";
+    color: $la-palma;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
