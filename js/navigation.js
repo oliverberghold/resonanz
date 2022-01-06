@@ -1,3 +1,13 @@
+//
+//preventDefault
+//
+
+var anchors = document.getElementsByTagName('a');
+for(i=0, len=anchors.length; i<len; i++){
+		anchors[i].addEventListener('click', function(e){e.preventDefault();});
+}
+
+
 /**
  * File navigation.js.
  *
@@ -109,11 +119,11 @@ const add_class_on_scroll = () => header.classList.add('site-header--shadow')
 const remove_class_on_scroll = () => header.classList.remove('site-header--shadow')
 
 window.addEventListener('scroll', function() {
-  scrollpos = window.scrollY;
-  if (scrollpos >= header_height) {
-    add_class_on_scroll()
-  } else {
-    remove_class_on_scroll()
-  }
-  console.log(scrollpos)
+	scrollpos = window.scrollY;
+	if (scrollpos >= header_height) {
+		add_class_on_scroll()
+	} else {
+			remove_class_on_scroll()
+		}
+		console.log(scrollpos)
 })
