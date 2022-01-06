@@ -100,6 +100,7 @@
     border: 1px solid;
     padding: 0;
     background-color: white;
+    @include slide-in-bottom;
     @include for-tablet-portrait-up {
       margin-left: 0;
     }

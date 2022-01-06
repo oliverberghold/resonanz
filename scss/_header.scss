@@ -7,7 +7,6 @@
   transition: all .5s ease-in-out;
   @include for-tablet-portrait-up {
     height: 7em;
-    top: 2em;
   }
 
   .container {
