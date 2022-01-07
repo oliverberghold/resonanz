@@ -3,7 +3,7 @@
   width: 100%;
   margin-left: auto;
   display: flex;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     flex: 3 0 0;
     margin-left: 3em;
   }
@@ -30,7 +30,7 @@
 
 .nav-menu {
   display: none;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     display: flex;
   }
 
@@ -50,7 +50,8 @@
 
   .menu-item {
     list-style: none;
-    @include for-tablet-landscape-up {
+    flex-shrink: 0;
+    @include for-tablet-portrait-up {
       margin-left: 1em;
     }
 
@@ -71,11 +72,11 @@
 
       &:active {
         background-color: $black;
-        @include for-tablet-landscape-up {
+        @include for-tablet-portrait-up {
           background-color: $zanah;
         }
       }
-      @include for-tablet-landscape-up {
+      @include for-tablet-portrait-up {
         color: $black;
         font-size: .9em;
       }
@@ -85,9 +86,7 @@
 /* Small menu. */
 .menu-toggle {
   display: block;
-}
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
+  @include for-tablet-portrait-up {
     display: none;
   }
 }
