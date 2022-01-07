@@ -55,6 +55,12 @@
 						'menu_id'        => 'primary-menu',
 					)
 				);
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'language-menu',
+					)
+				);
 				?>
 			</nav><!-- #site-navigation -->
 		</div>

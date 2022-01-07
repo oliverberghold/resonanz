@@ -50,6 +50,8 @@ function resonanz_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'resonanz' ),
+			'menu-2' => esc_html__( 'Language', 'resonanz' ),
+
 		)
 	);
 
@@ -175,4 +177,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
