@@ -97,12 +97,28 @@
   .sub-menu {
     display: none;
     position: absolute;
-    border: 1px solid;
+    border: 1px solid $ebb;
+    border-radius: .2em;
     padding: 0;
     background-color: white;
     @include slide-in-bottom;
     @include for-tablet-portrait-up {
       margin-left: 0;
+      margin-top: .5em;
+    }
+
+    .menu-item {
+      a {
+        color: green;
+        border-radius: 0;
+        width: 100%;
+
+        &:hover {
+          @include for-tablet-portrait-up {
+            background-color: $black;
+          }
+        }
+      }
     }
   }
 
@@ -114,5 +130,11 @@
 
   .menu-item {
     margin-left: 0;
+  }
+
+  a {
+    &:focus {
+      outline: none;
+    }
   }
 }
