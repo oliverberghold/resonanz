@@ -1,14 +1,3 @@
-//
-//preventDefault
-//
-
-// var anchors = document.getElementsByClassName('menu-item-41');
-// for (i = 0, len = anchors.length; i < len; i++) {
-//   anchors[i].addEventListener('click', function(e) {
-//     e.preventDefault();
-//   });
-// }
-
 
 /**
  * File navigation.js.

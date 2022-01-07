@@ -59,6 +59,7 @@
 					array(
 						'theme_location' => 'menu-2',
 						'menu_id'        => 'language-menu',
+						'menu_class'     => 'dropdown-menu'
 					)
 				);
 				?>
