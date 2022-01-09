@@ -734,7 +734,7 @@ textarea {
   position: absolute;
   border: 1px solid #ede9e9;
   border-radius: .2em;
-  padding: 0;
+  padding: 1em;
   background-color: white;
   -webkit-animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
@@ -744,13 +744,12 @@ textarea {
       margin-top: .5em; } }
   .menu-item-has-children .sub-menu .menu-item a {
     color: green;
-    border-radius: 0;
-    width: 100%; }
+    border-radius: 0; }
     @media (min-width: 600px) {
       .menu-item-has-children .sub-menu .menu-item a:hover {
-        background-color: #222222; } }
-.menu-item-has-children.focus .sub-menu {
-  display: block; }
+        color: red; } }
+  .menu-item-has-children .sub-menu--visible {
+    display: block; }
 .menu-item-has-children .menu-item {
   margin-left: 0; }
 .menu-item-has-children a:focus {

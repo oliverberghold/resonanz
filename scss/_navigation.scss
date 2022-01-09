@@ -90,7 +90,7 @@
     position: absolute;
     border: 1px solid $ebb;
     border-radius: .2em;
-    padding: 0;
+    padding: 1em;
     background-color: white;
     @include slide-in-bottom;
     @include for-tablet-portrait-up {
@@ -102,19 +102,16 @@
       a {
         color: green;
         border-radius: 0;
-        width: 100%;
 
         &:hover {
           @include for-tablet-portrait-up {
-            background-color: $black;
+            color: red;
           }
         }
       }
     }
-  }
 
-  &.focus {
-    .sub-menu {
+    &--visible {
       display: block;
     }
   }
