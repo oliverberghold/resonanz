@@ -672,7 +672,7 @@ textarea {
     margin-left: auto;
     z-index: 1; }
   .main-navigation.toggled .nav-menu {
-    background-color: pink;
+    background-color: #151515;
     position: fixed;
     top: 4em;
     left: 0;
@@ -680,8 +680,11 @@ textarea {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    justify-content: center; }
+    .main-navigation.toggled .nav-menu .menu-item {
+      margin-left: 2em; }
+      .main-navigation.toggled .nav-menu .menu-item a {
+        color: #92c770; }
 
 .nav-menu {
   display: none; }
@@ -707,7 +710,6 @@ textarea {
     color: inherit;
     font-size: .8em;
     letter-spacing: .05em;
-    color: #27A212;
     font-size: 1em;
     display: inline-block;
     padding: 1em;
@@ -742,14 +744,14 @@ textarea {
     .menu-item-has-children .sub-menu {
       margin-left: 0;
       margin-top: .5em; } }
-  .menu-item-has-children .sub-menu .menu-item a {
-    color: green;
-    border-radius: 0; }
-    @media (min-width: 600px) {
-      .menu-item-has-children .sub-menu .menu-item a:hover {
-        color: red; } }
   .menu-item-has-children .sub-menu--visible {
-    display: block; }
+    display: block;
+    right: 1em; }
+  .menu-item-has-children .sub-menu .menu-item a {
+    border-radius: 0;
+    font-size: .9em; }
+  .menu-item-has-children .sub-menu .menu-item:first-child a {
+    font-weight: bold; }
 .menu-item-has-children .menu-item {
   margin-left: 0; }
 .menu-item-has-children a:focus {
