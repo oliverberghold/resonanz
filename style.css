@@ -415,6 +415,28 @@ ul {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+.hover {
+  -webkit-animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes hover {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes hover {
+  0% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
 html {
   color: #222;
   font-size: 1em;
@@ -651,7 +673,8 @@ textarea {
       height: 7em; } }
   .site-header .container {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
 
 .site-header--shadow {
   background-color: white;
@@ -666,11 +689,15 @@ textarea {
   display: flex; }
   @media (min-width: 600px) {
     .main-navigation {
-      flex: 3 0 0;
       margin-left: 3em; } }
   .main-navigation .menu-toggle {
     margin-left: auto;
-    z-index: 1; }
+    z-index: 1;
+    background-color: #222222;
+    border: 1px solid #222222;
+    border-radius: .2em;
+    color: white;
+    font-size: .8em; }
   .main-navigation.toggled .nav-menu {
     background-color: #151515;
     position: fixed;
@@ -686,43 +713,9 @@ textarea {
       .main-navigation.toggled .nav-menu .menu-item a {
         color: #92c770; }
 
-.nav-menu {
-  display: none; }
-  @media (min-width: 600px) {
-    .nav-menu {
-      display: flex; } }
-
-.dropdown-menu {
-  display: flex;
-  height: 100%;
-  align-items: center; }
-
-.menu-item {
-  flex-shrink: 0;
-  list-style: none; }
-  @media (min-width: 600px) {
-    .menu-item {
-      margin-left: 1em; } }
-  .menu-item:first-child {
-    margin-left: 0; }
-  .menu-item a {
-    text-decoration: none;
-    color: inherit;
-    font-size: .8em;
-    letter-spacing: .05em;
-    font-size: 1em;
-    display: inline-block;
-    padding: 1em;
-    border-radius: .5em; }
-    .menu-item a:active {
-      background-color: #222222; }
-      @media (min-width: 600px) {
-        .menu-item a:active {
-          background-color: #dbedd0; } }
-    @media (min-width: 600px) {
-      .menu-item a {
-        color: #222222;
-        font-size: .9em; } }
+@media (min-width: 600px) {
+  .menu-language-menu-container {
+    margin-left: 5em; } }
 
 /* Small menu. */
 .menu-toggle {
@@ -731,31 +724,109 @@ textarea {
     .menu-toggle {
       display: none; } }
 
-.menu-item-has-children .sub-menu {
+.nav-menu {
+  display: none; }
+  @media (min-width: 600px) {
+    .nav-menu {
+      display: flex; } }
+  .nav-menu .menu-item {
+    flex-shrink: 0;
+    list-style: none; }
+    @media (min-width: 600px) {
+      .nav-menu .menu-item {
+        margin-left: 2em; } }
+    .nav-menu .menu-item:first-child {
+      margin-left: 0; }
+    .nav-menu .menu-item a {
+      text-decoration: none;
+      color: #222222;
+      font-size: .8em;
+      letter-spacing: .05em;
+      display: inline-block; }
+      @media (min-width: 600px) {
+        .nav-menu .menu-item a {
+          font-size: .9em;
+          position: relative; }
+          .nav-menu .menu-item a:hover:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: .2em;
+            background-color: #92c770;
+            position: absolute;
+            -webkit-animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; } }
+  .nav-menu .current_page_item a {
+    position: relative; }
+    .nav-menu .current_page_item a:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: .2em;
+      background-color: #92c770;
+      position: absolute; }
+    .nav-menu .current_page_item a:hover:after {
+      -webkit-animation: none;
+      animation: none; }
+
+.dropdown-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none; }
+  .dropdown-menu .menu-item a {
+    font-size: .9em;
+    position: relative;
+    text-decoration: none;
+    color: #222222;
+    letter-spacing: .05em;
+    display: inline-block; }
+@media (min-width: 600px) and (min-width: 600px) {
+  .dropdown-menu .menu-item-has-children a:hover:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .2em;
+    background-color: #92c770;
+    position: absolute;
+    -webkit-animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; } }
+
+  .dropdown-menu .menu-item-has-children .menu-item {
+    margin-left: 0; }
+    .dropdown-menu .menu-item-has-children .menu-item a {
+      font-size: .8em; }
+
+.sub-menu {
   display: none;
   position: absolute;
   border: 1px solid #ede9e9;
   border-radius: .2em;
   padding: 1em;
   background-color: white;
+  list-style: none;
   -webkit-animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
   @media (min-width: 600px) {
-    .menu-item-has-children .sub-menu {
-      margin-left: 0;
-      margin-top: .5em; } }
-  .menu-item-has-children .sub-menu--visible {
-    display: block;
-    right: 1em; }
-  .menu-item-has-children .sub-menu .menu-item a {
-    border-radius: 0;
-    font-size: .9em; }
-  .menu-item-has-children .sub-menu .menu-item:first-child a {
-    font-weight: bold; }
-.menu-item-has-children .menu-item {
-  margin-left: 0; }
-.menu-item-has-children a:focus {
-  outline: none; }
+    .sub-menu {
+      margin-left: 0; } }
+  .sub-menu--visible {
+    display: block; }
+    @media (min-width: 600px) {
+      .sub-menu--visible {
+        border-top: 0.2em solid #92c770;
+        margin-top: -.1em; } }
+    @media (max-width: 599px) {
+      .sub-menu--visible {
+        right: 1em; } }
+  .sub-menu .menu-item a {
+    border-top: 1px solid #ede9e9;
+    padding: 1em; }
+    .sub-menu .menu-item a:hover:after, .sub-menu .menu-item a:hover:before {
+      content: none; }
+  .sub-menu .menu-item:first-child a {
+    font-weight: bold;
+    border-top: 0; }
 
 .teaser {
   display: flex;
@@ -920,5 +991,8 @@ textarea {
   @media (min-width: 900px) {
     .intro__illustration img {
       height: calc(100% + 6em); } }
+
+.custom-logo {
+  width: 10em; }
 
 /*# sourceMappingURL=style.css.map */

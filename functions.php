@@ -185,3 +185,12 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * make the use of svg possible.
+ */
+function cc_mime_types($mimes) {
+ $mimes['svg'] = 'image/svg+xml';
+ return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

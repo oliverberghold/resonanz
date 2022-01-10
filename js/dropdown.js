@@ -3,7 +3,8 @@ const dropdownListContainer = document.querySelector(
 );
 const dropdownBtn = document.querySelector(".menu-item-has-children > a");
 
-dropdownBtn.addEventListener("click", function () {
+dropdownBtn.addEventListener("click", function (e) {
+  event.preventDefault();
   dropdownListContainer.classList.toggle("sub-menu--visible");
 });
 
