@@ -1,13 +1,15 @@
 .nav-menu {
   display: none;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
+    height: 100%;
     display: flex;
+    align-items: center;
   }
 
   .menu-item {
     flex-shrink: 0;
     list-style: none;
-    @include for-tablet-portrait-up {
+    @include for-tablet-landscape-up {
       margin-left: 2em;
     }
 
@@ -21,7 +23,7 @@
       font-size: .8em;
       letter-spacing: .05em;
       display: inline-block;
-      @include for-tablet-portrait-up {
+      @include for-tablet-landscape-up {
         font-size: .9em;
         position: relative;
 

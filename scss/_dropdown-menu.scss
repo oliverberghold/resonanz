@@ -16,21 +16,24 @@
   }
 
   .menu-item-has-children {
-    @include for-tablet-portrait-up {
-      a {
-        @include for-tablet-portrait-up {
-          &:hover {
-            &:after {
-              content: '';
-              display: block;
-              width: 100%;
-              height: .2em;
-              background-color: $mantis;
-              position: absolute;
-              @include hover;
-            }
-          }
-        }
+    > a {
+      background-color: $black;
+      // color: $zanah;
+      background-color: $zanah;
+      padding: 1em;
+      border-radius: .2em;
+      transition: .3s;
+
+      &:after {
+        content: url("img/icon-translate.svg");
+        width: 1.1em;
+        top: .2em;
+        margin-left: .5em;
+        display: inline-block;
+      }
+
+      &:hover {
+        background-color: $mantis;
       }
     }
 
@@ -54,18 +57,18 @@
   background-color: white;
   list-style: none;
   @include slide-in-bottom;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     margin-left: 0;
   }
 
   &--visible {
     display: block;
-    @include for-tablet-portrait-up {
-      border-top: .2em solid $mantis;
-      margin-top: -.1em;
+    @include for-tablet-landscape-up {
+      margin-top: .3em;
     }
     @include for-phone-only {
       right: 1em;
+      margin-top: 1em;
     }
   }
 
