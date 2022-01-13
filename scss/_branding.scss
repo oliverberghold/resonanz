@@ -1,3 +1,6 @@
 .custom-logo {
-  width: 10em;
+  width: 6.5em;
+  @include for-tablet-landscape-up {
+    width: 10em;
+  }
 }

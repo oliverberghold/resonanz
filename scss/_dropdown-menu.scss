@@ -18,11 +18,13 @@
   .menu-item-has-children {
     > a {
       background-color: $black;
-      // color: $zanah;
       background-color: $zanah;
       padding: 1em;
       border-radius: .2em;
       transition: .3s;
+      @include for-phone-only {
+        font-size: .8em;
+      }
 
       &:after {
         content: url("img/icon-translate.svg");
@@ -51,10 +53,10 @@
 .sub-menu {
   display: none;
   position: absolute;
-  border: 1px solid $ebb;
+  border: 1px solid $zanah;
   border-radius: .2em;
   padding: 1em;
-  background-color: white;
+  background-color: $zanah;
   list-style: none;
   @include slide-in-bottom;
   @include for-tablet-landscape-up {
@@ -74,7 +76,7 @@
 
   .menu-item {
     a {
-      border-top: 1px solid $ebb;
+      border-top: 1px solid $gray;
       padding: 1em;
 
       &:hover {

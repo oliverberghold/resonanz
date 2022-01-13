@@ -152,7 +152,6 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-button,
 input,
 optgroup,
 select,
@@ -165,6 +164,9 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */ }
+
+button {
+  padding: 0; }
 
 /**
  * Show the overflow in IE.
@@ -685,20 +687,24 @@ textarea {
 .main-navigation {
   width: 100%;
   margin-left: auto;
-  display: flex; }
+  display: flex;
+  align-items: center; }
   @media (min-width: 900px) {
     .main-navigation {
       margin-left: 3em; } }
   .main-navigation.toggled .nav-menu {
     background-color: #151515;
     position: fixed;
-    top: 4em;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    z-index: -1;
+    -webkit-animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
     .main-navigation.toggled .nav-menu .menu-item {
       margin-left: 2em; }
       .main-navigation.toggled .nav-menu .menu-item a {
@@ -716,14 +722,17 @@ textarea {
   margin-left: auto;
   z-index: 1;
   background-color: #222222;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
   border-radius: .2em;
-  color: white;
+  color: #dbedd0;
   font-size: .8em;
-  display: block; }
+  display: flex;
+  align-items: center; }
   @media (min-width: 900px) {
     .button--menu-toggle {
       display: none; } }
+  .button--menu-toggle[aria-expanded="true"] {
+    border: 2px solid #dbedd0; }
 
 .nav-menu {
   display: none; }
@@ -743,9 +752,11 @@ textarea {
     .nav-menu .menu-item a {
       text-decoration: none;
       color: #222222;
-      font-size: .8em;
       letter-spacing: .05em;
       display: inline-block; }
+      @media (max-width: 599px) {
+        .nav-menu .menu-item a {
+          line-height: 2.5em; } }
       @media (min-width: 900px) {
         .nav-menu .menu-item a {
           font-size: .9em;
@@ -761,13 +772,14 @@ textarea {
             animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; } }
   .nav-menu .current_page_item a {
     position: relative; }
-    .nav-menu .current_page_item a:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: .2em;
-      background-color: #92c770;
-      position: absolute; }
+    @media (min-width: 900px) {
+      .nav-menu .current_page_item a:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .2em;
+        background-color: #92c770;
+        position: absolute; } }
     .nav-menu .current_page_item a:hover:after {
       -webkit-animation: none;
       animation: none; }
@@ -790,6 +802,9 @@ textarea {
     padding: 1em;
     border-radius: .2em;
     transition: .3s; }
+    @media (max-width: 599px) {
+      .dropdown-menu .menu-item-has-children > a {
+        font-size: .8em; } }
     .dropdown-menu .menu-item-has-children > a:after {
       content: url("img/icon-translate.svg");
       width: 1.1em;
@@ -806,10 +821,10 @@ textarea {
 .sub-menu {
   display: none;
   position: absolute;
-  border: 1px solid #ede9e9;
+  border: 1px solid #dbedd0;
   border-radius: .2em;
   padding: 1em;
-  background-color: white;
+  background-color: #dbedd0;
   list-style: none;
   -webkit-animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-bottom 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
@@ -826,7 +841,7 @@ textarea {
         right: 1em;
         margin-top: 1em; } }
   .sub-menu .menu-item a {
-    border-top: 1px solid #ede9e9;
+    border-top: 1px solid #888888;
     padding: 1em; }
     .sub-menu .menu-item a:hover:after, .sub-menu .menu-item a:hover:before {
       content: none; }
@@ -999,6 +1014,9 @@ textarea {
       height: calc(100% + 6em); } }
 
 .custom-logo {
-  width: 10em; }
+  width: 6.5em; }
+  @media (min-width: 900px) {
+    .custom-logo {
+      width: 10em; } }
 
 /*# sourceMappingURL=style.css.map */
