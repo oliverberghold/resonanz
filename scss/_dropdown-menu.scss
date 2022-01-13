@@ -25,6 +25,9 @@
       @include for-phone-only {
         font-size: .8em;
       }
+      @include for-tablet-landscape-up {
+        min-width: 5.8em;
+      }
 
       &:after {
         content: url("img/icon-translate.svg");
@@ -65,12 +68,12 @@
 
   &--visible {
     display: block;
+    margin-top: .5em;
     @include for-tablet-landscape-up {
       margin-top: .3em;
     }
     @include for-phone-only {
       right: 1em;
-      margin-top: 1em;
     }
   }
 
