@@ -835,13 +835,7 @@ textarea {
       margin-left: 0; } }
   .sub-menu--visible {
     display: block;
-    margin-top: .5em; }
-    @media (min-width: 900px) {
-      .sub-menu--visible {
-        margin-top: .3em; } }
-    @media (max-width: 599px) {
-      .sub-menu--visible {
-        right: 1em; } }
+    margin-top: .3em; }
   .sub-menu .menu-item a {
     margin: .5em 0; }
   .sub-menu .menu-item:first-child a {
