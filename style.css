@@ -758,7 +758,7 @@ textarea {
           line-height: 2.5em; } }
       @media (min-width: 900px) {
         .nav-menu .menu-item a {
-          font-size: .9em;
+          font-size: .8em;
           position: relative; }
           .nav-menu .menu-item a:hover:after {
             content: '';
@@ -789,7 +789,7 @@ textarea {
   height: 100%;
   list-style: none; }
   .dropdown-menu .menu-item a {
-    font-size: .9em;
+    font-size: .8em;
     position: relative;
     text-decoration: none;
     color: #222222;
@@ -843,13 +843,14 @@ textarea {
       .sub-menu--visible {
         right: 1em; } }
   .sub-menu .menu-item a {
-    border-top: 1px solid #888888;
-    padding: 1em; }
-    .sub-menu .menu-item a:hover:after, .sub-menu .menu-item a:hover:before {
-      content: none; }
+    margin: .5em 0; }
   .sub-menu .menu-item:first-child a {
-    font-weight: bold;
-    border-top: 0; }
+    font-weight: bold; }
+    .sub-menu .menu-item:first-child a:after {
+      content: url("img/icon-check.svg");
+      width: 1em;
+      display: inline-block;
+      margin-left: .5em; }
 
 .teaser {
   display: flex;
