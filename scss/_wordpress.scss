@@ -1,0 +1,15 @@
+.post-edit-link {
+  display: block;
+  margin-right: 1em;
+  padding: 1em;
+  margin-left: auto;
+  z-index: 1;
+  background-color: $la-palma;
+  border-radius: .2em;
+  color: black;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  text-decoration: none;
+}
