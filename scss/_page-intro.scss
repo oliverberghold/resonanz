@@ -41,9 +41,15 @@
     width: 100%;
     background-color: $mantis;
     left: -.2em;
-    bottom: -6.2em;
+    bottom: -.2em;
     border-radius: 0 0 0 2em;
     z-index: -1;
+    @include for-tablet-portrait-up {
+      bottom: -3.2em;
+    }
+    @include for-tablet-landscape-up {
+      bottom: -6.2em;
+    }
   }
 
   img {
