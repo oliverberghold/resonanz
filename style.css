@@ -734,14 +734,13 @@ textarea {
       text-decoration: none;
       color: #222222;
       letter-spacing: .05em;
-      display: inline-block; }
-      @media (max-width: 599px) {
-        .nav-menu .menu-item a {
-          line-height: 2.5em; } }
+      display: inline-block;
+      line-height: 2.5em; }
       @media (min-width: 900px) {
         .nav-menu .menu-item a {
           font-size: .8em;
-          position: relative; }
+          position: relative;
+          line-height: inherit; }
           .nav-menu .menu-item a:hover:after {
             content: '';
             display: block;

@@ -22,12 +22,11 @@
       color: $black;
       letter-spacing: .05em;
       display: inline-block;
-      @include for-phone-only {
-        line-height: 2.5em;
-      }
+      line-height: 2.5em;
       @include for-tablet-landscape-up {
         font-size: .8em;
         position: relative;
+        line-height: inherit;
 
         &:hover {
           &:after {
