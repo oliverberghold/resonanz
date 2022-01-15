@@ -600,12 +600,47 @@ textarea {
   .main {
     margin-top: 8em; } }
 
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex-wrapper--rounded {
+  padding: 2em;
+  border-radius: 1em; }
+
+.flex-wrap {
+  display: flex; }
+
+.flex-center--x {
+  align-items: center; }
+
+.flex-center--y {
+  justify-content: center; }
+
 .container {
   max-width: 70em;
   margin-right: auto;
   margin-left: auto;
   padding-right: 2em;
   padding-left: 2em; }
+
+.container--centered {
+  text-align: center;
+  max-width: 75%; }
+
+.container--flex {
+  display: flex;
+  gap: 3em; }
+
+.container--quick-search {
+  z-index: 2;
+  margin-top: -1em;
+  display: none; }
+  @media (min-width: 900px) {
+    .container--quick-search {
+      display: block;
+      margin-top: -2em; } }
 
 .site-header {
   position: fixed;
@@ -869,7 +904,7 @@ textarea {
   top: -1em;
   left: -1em;
   z-index: -1;
-  border-radius: 0 .5em 0; }
+  border-radius: .2em; }
 .teaser__illustration--left img {
   border-radius: 0 0 1.5em 0; }
 
@@ -908,6 +943,56 @@ textarea {
     display: inline-block;
     width: 1em;
     margin-left: -1em; }
+
+.banner {
+  display: flex; }
+
+@media (max-width: 599px) {
+  .banner--portrait {
+    flex-direction: column; } }
+.banner--portrait div {
+  flex: 1 0 0; }
+
+.banner--covid {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 1em; }
+  @media (min-width: 600px) {
+    .banner--covid {
+      width: 35%;
+      margin-right: auto;
+      margin-left: auto; } }
+
+.banner__header {
+  display: flex;
+  gap: 1em;
+  align-items: center; }
+
+.banner__title {
+  flex: 5 0 0;
+  color: #222222; }
+
+.banner__illustration {
+  flex: 1 0 0;
+  opacity: .8; }
+
+.portrait__content {
+  padding: 2em;
+  z-index: 2; }
+
+.portrait__image {
+  display: flex;
+  flex: 1 0 0; }
+  .portrait__image img {
+    width: 100%;
+    border-radius: 0 0 0 2em;
+    -o-object-fit: cover;
+    object-fit: cover; }
+    @media (max-width: 599px) {
+      .portrait__image img {
+        width: 100%;
+        border-radius: 2em 0 0 0; } }
 
 .site {
   margin-top: 5em; }
