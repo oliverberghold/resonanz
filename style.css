@@ -945,12 +945,19 @@ textarea {
 
 .banner {
   display: flex; }
+  @media (max-width: 599px) {
+    .banner {
+      flex-direction: column; } }
 
-@media (max-width: 599px) {
-  .banner--portrait {
-    flex-direction: column; } }
-.banner--portrait div {
+.banner--portrait-large .portrait__image {
   flex: 1 0 0; }
+.banner--portrait-large .portrait__content {
+  flex: 1 0 0; }
+
+.banner--portrait-small .portrait__image {
+  flex: 1 0 0; }
+.banner--portrait-small .portrait__content {
+  flex: 3 0 0; }
 
 .banner--covid {
   display: flex;
@@ -985,13 +992,23 @@ textarea {
   flex: 1 0 0; }
   .portrait__image img {
     width: 100%;
-    border-radius: 0 0 0 2em;
     -o-object-fit: cover;
     object-fit: cover; }
     @media (max-width: 599px) {
       .portrait__image img {
-        width: 100%;
-        border-radius: 2em 0 0 0; } }
+        width: 100%; } }
+
+.portrait__image--left img {
+  border-radius: 0 0 0 2em; }
+  @media (max-width: 599px) {
+    .portrait__image--left img {
+      border-radius: 2em 0 0 0; } }
+
+.portrait__image--right img {
+  border-radius: 0 0 2em 0; }
+  @media (max-width: 599px) {
+    .portrait__image--right img {
+      border-radius: 0 0 0 2em; } }
 
 .site {
   margin-top: 5em; }

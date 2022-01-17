@@ -1,14 +1,27 @@
 .banner {
   display: flex;
-}
-
-.banner--portrait {
   @include for-phone-only {
     flex-direction: column;
   }
+}
 
-  div {
+.banner--portrait-large {
+  .portrait__image {
     flex: 1 0 0;
+  }
+
+  .portrait__content {
+    flex: 1 0 0;
+  }
+}
+
+.banner--portrait-small {
+  .portrait__image {
+    flex: 1 0 0;
+  }
+
+  .portrait__content {
+    flex: 3 0 0;
   }
 }
 
@@ -51,12 +64,28 @@
 
   img {
     width: 100%;
-    border-radius: 0 0 0 2em;
     -o-object-fit: cover;
     object-fit: cover;
     @include for-phone-only {
       width: 100%;
+    }
+  }
+}
+
+.portrait__image--left {
+  img {
+    border-radius: 0 0 0 2em;
+    @include for-phone-only {
       border-radius: 2em 0 0 0;
+    }
+  }
+}
+
+.portrait__image--right {
+  img {
+    border-radius: 0 0 2em 0;
+    @include for-phone-only {
+      border-radius: 0 0 0 2em;
     }
   }
 }
