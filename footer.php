@@ -11,7 +11,19 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer container">
+	<footer id="colophon" class="site-footer">
+
+		<nav id="footer-navigation" class="container footer-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-3',
+					'menu_id'        => 'footer-menu',
+				)
+			);
+			?>
+		</nav>
+
 		<!--<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'resonanz' ) ); ?>">
 				<?php

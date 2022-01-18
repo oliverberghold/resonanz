@@ -663,7 +663,32 @@ textarea {
   box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.2); }
 
 .site-footer {
-  margin-top: 10em; }
+  margin-top: 10em;
+  background-color: #151515; }
+
+.footer-navigation {
+  display: flex;
+  justify-content: center; }
+  .footer-navigation .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    @media (min-width: 900px) {
+      .footer-navigation .menu {
+        flex-direction: row; } }
+    .footer-navigation .menu .menu-item {
+      list-style: none;
+      margin: .5em 0; }
+      @media (min-width: 900px) {
+        .footer-navigation .menu .menu-item {
+          margin: 0 0 0 2em; } }
+      .footer-navigation .menu .menu-item:first-child {
+        margin-left: 0; }
+      .footer-navigation .menu .menu-item a {
+        color: #dbedd0;
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: .8em; }
 
 .main-navigation {
   width: 100%;

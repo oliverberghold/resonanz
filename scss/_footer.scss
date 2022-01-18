@@ -1,3 +1,37 @@
 .site-footer {
   margin-top: 10em;
+  background-color: $cod-gray;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include for-tablet-landscape-up {
+      flex-direction: row;
+    }
+
+    .menu-item {
+      list-style: none;
+      margin: .5em 0;
+      @include for-tablet-landscape-up {
+        margin: 0 0 0 2em;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        color: $zanah;
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: .8em;
+      }
+    }
+  }
 }

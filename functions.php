@@ -46,11 +46,12 @@ function resonanz_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'resonanz' ),
 			'menu-2' => esc_html__( 'Language', 'resonanz' ),
+			'menu-3' => esc_html__( 'Footer', 'resonanz'),
 
 		)
 	);
