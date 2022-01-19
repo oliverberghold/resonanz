@@ -668,7 +668,10 @@ textarea {
 
 .footer-navigation {
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  align-items: center; }
+  .footer-navigation .menu-social-menu-container {
+    margin-top: 2em; }
   .footer-navigation .menu {
     display: flex;
     align-items: center;
@@ -689,6 +692,18 @@ textarea {
         text-decoration: none;
         letter-spacing: .05em;
         font-size: .8em; }
+
+#social-menu .menu-item a {
+  background-color: #92c770;
+  border-radius: 50%;
+  background-image: url("img/icon-instagram.svg");
+  background-repeat: no-repeat;
+  background-size: 1.8em;
+  background-position: center;
+  color: transparent;
+  width: 3em;
+  height: 3em;
+  display: block; }
 
 .main-navigation {
   width: 100%;

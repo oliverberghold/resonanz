@@ -5,7 +5,14 @@
 
 .footer-navigation {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .menu-social-menu-container {
+    margin-top: 2em;
+  }
+
+  .menu-footer-menu-container {}
 
   .menu {
     display: flex;
@@ -33,5 +40,20 @@
         font-size: .8em;
       }
     }
+  }
+}
+
+#social-menu {
+  .menu-item a {
+    background-color: $mantis;
+    border-radius: 50%;
+    background-image: url("img/icon-instagram.svg");
+    background-repeat: no-repeat;
+    background-size: 1.8em;
+    background-position: center;
+    color: transparent;
+    width: 3em;
+    height: 3em;
+    display: block;
   }
 }

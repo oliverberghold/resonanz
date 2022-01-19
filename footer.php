@@ -14,11 +14,21 @@
 	<footer id="colophon" class="site-footer">
 
 		<nav id="footer-navigation" class="container footer-navigation">
+
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-3',
 					'menu_id'        => 'footer-menu',
+				)
+			);
+			?>
+
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-4',
+					'menu_id'        => 'social-menu',
 				)
 			);
 			?>
