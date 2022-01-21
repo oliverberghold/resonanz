@@ -36,17 +36,14 @@
 .teaser__copy {
   font-size: .85em;
   line-height: 1.8;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .text-link {
   text-decoration: none;
   color: inherit;
-  font-size: .85em;
+  font-size: .85rem;
   position: relative;
   display: inline-block;
-  margin-top: 1em;
 
   &:after {
     content: '';
@@ -70,6 +67,14 @@
       width: 100%;
     }
   }
+}
+
+.text-link--bold {
+  font-weight: 600;
+}
+
+.text-link--margin {
+  margin-top: 1em;
 }
 
 .kicker {
