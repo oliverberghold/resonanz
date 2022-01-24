@@ -13,3 +13,10 @@ window.addEventListener("click", function (event) {
     dropdownListContainer.classList.remove("sub-menu--visible");
   }
 });
+
+
+var el = document.querySelector('.menu-item-has-children > a');
+
+el.onclick = function() {
+  el.classList.toggle('menu-link--current');
+}

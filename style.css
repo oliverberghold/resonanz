@@ -522,6 +522,8 @@ ul {
       display: inline-block; }
     .dropdown-menu .menu-item-has-children > a:hover {
       background-color: #92c770; }
+    .dropdown-menu .menu-item-has-children > a.menu-link--current {
+      background-color: #92c770; }
   .dropdown-menu .menu-item-has-children .menu-item {
     margin-left: 0; }
     .dropdown-menu .menu-item-has-children .menu-item a {

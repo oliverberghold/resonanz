@@ -41,6 +41,10 @@
       &:hover {
         background-color: $mantis;
       }
+
+      &.menu-link--current {
+        background-color: $mantis;
+      }
     }
 
     .menu-item {
@@ -53,7 +57,6 @@
   }
 }
 // sub-menu
-
 .sub-menu {
   display: none;
   position: absolute;
