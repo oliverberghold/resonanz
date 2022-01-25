@@ -25,7 +25,8 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'style.css': 'scss/build.scss'
+                    'style.css': 'scss/build.scss',
+                    'tribe-events/tribe-events.css': 'scss/tribe-events/tribe-events.scss'
                 }
             }
         },
