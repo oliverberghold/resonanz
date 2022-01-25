@@ -1,3 +1,18 @@
 .tribe-events-view {
-  background-color: red;
+  border: 1px solid deeppink;
+  max-width: 70em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.tribe-common .tribe-common-l-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+  padding-left: 0;
+  padding-right: 0;
 }
