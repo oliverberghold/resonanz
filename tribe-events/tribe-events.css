@@ -1,4 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
 .tribe-events-view {
+  border: 1px solid deeppink;
+  max-width: 70em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2em;
+  padding-left: 2em; }
+
+main#tribe-events-pg-template {
   border: 1px solid deeppink;
   max-width: 70em;
   margin-right: auto;
@@ -13,5 +23,67 @@
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
   padding-left: 0;
   padding-right: 0; }
+
+.tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h6 {
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.4; }
+
+.single-tribe_events .tribe-events-single-event-title {
+  font-size: min(max(1.5em, 1.5vw), 3em);
+  color: #222222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0; }
+
+.tribe-events-content ol,
+.tribe-events-content p,
+.tribe-events-content ul {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .85em;
+  line-height: 1.8; }
+
+#tribe-events-pg-template .tribe-events-content ul,
+.tribe-events-after-html ul,
+.tribe-events-before-html ul {
+  list-style: inside; }
+
+#tribe-events-pg-template .tribe-events-content ol li,
+#tribe-events-pg-template .tribe-events-content ul li,
+.tribe-events-after-html ol li,
+.tribe-events-after-html ul li,
+.tribe-events-before-html ol li,
+.tribe-events-before-html ul li {
+  font-size: .85em;
+  line-height: 1.8; }
+
+p strong {
+  font-size: .85em; }
+
+.single-tribe_events .tribe-events-schedule .tribe-events-cost {
+  text-transform: none; }
+
+.tribe-events-back a,
+.tribe-events-back a:visited {
+  font-family: 'Open Sans', sans-serif;
+  font-size: .85em;
+  line-height: 1.8;
+  color: #222;
+  text-decoration: none; }
+
+.single-tribe_events a.tribe-events-gcal,
+.single-tribe_events a.tribe-events-gcal:hover,
+.single-tribe_events a.tribe-events-ical,
+.single-tribe_events a.tribe-events-ical:hover {
+  padding-left: 32px; }
+
+.tribe-events-button.tribe-events-ics {
+  margin-top: 21px;
+  margin-left: 32px;
+  background-color: #dbedd0; }
 
 /*# sourceMappingURL=tribe-events.css.map */
