@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
 .tribe-events-view {
   border: 1px solid deeppink;
   max-width: 70em;
@@ -85,5 +84,3 @@ p strong {
   margin-top: 21px;
   margin-left: 32px;
   background-color: #dbedd0; }
-
-/*# sourceMappingURL=tribe-events.css.map */
