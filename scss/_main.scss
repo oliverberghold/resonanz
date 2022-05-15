@@ -66,12 +66,12 @@ textarea {
   resize: vertical;
 }
 
-* Hide visually and from screen readers */ .hidden,
+.hidden,
 [hidden] {
   display: none !important;
 }
 
-*/ .sr-only {
+.sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
