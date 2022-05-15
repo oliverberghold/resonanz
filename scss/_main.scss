@@ -21,15 +21,7 @@ footer {
   padding-top: 3em;
   padding-bottom: 3em;
 }
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -50,11 +42,7 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+
 audio,
 canvas,
 iframe,
@@ -77,28 +65,13 @@ fieldset {
 textarea {
   resize: vertical;
 }
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers
- */
-.hidden,
+
+* Hide visually and from screen readers */ .hidden,
 [hidden] {
   display: none !important;
 }
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-.sr-only {
+
+*/ .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
