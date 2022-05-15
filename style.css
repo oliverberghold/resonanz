@@ -475,9 +475,11 @@ ul {
             position: absolute;
             -webkit-animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
             animation: hover 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; } }
+  .nav-menu .current-menu-item a,
   .nav-menu .current_page_item a {
     position: relative; }
     @media (min-width: 900px) {
+      .nav-menu .current-menu-item a:after,
       .nav-menu .current_page_item a:after {
         content: '';
         display: block;
@@ -485,6 +487,7 @@ ul {
         height: .2em;
         background-color: #92c770;
         position: absolute; } }
+    .nav-menu .current-menu-item a:hover:after,
     .nav-menu .current_page_item a:hover:after {
       -webkit-animation: none;
       animation: none; }
