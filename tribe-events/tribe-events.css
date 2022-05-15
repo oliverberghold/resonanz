@@ -1,5 +1,4 @@
 .tribe-events-view {
-  border: 1px solid deeppink;
   max-width: 70em;
   margin-right: auto;
   margin-left: auto;
@@ -7,7 +6,6 @@
   padding-left: 2em; }
 
 main#tribe-events-pg-template {
-  border: 1px solid deeppink;
   max-width: 70em;
   margin-right: auto;
   margin-left: auto;
@@ -83,3 +81,5 @@ p strong {
   margin-top: 21px;
   margin-left: 32px;
   background-color: #dbedd0; }
+
+/*# sourceMappingURL=tribe-events.css.map */
